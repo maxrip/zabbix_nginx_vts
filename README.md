@@ -12,12 +12,7 @@
 
 **Установка**
 
- 1. Добавить в /etc/zabbix/zabbix_agentd.d/userparameter_nginx_vts.conf
-````UserParameter=nginx.stat.[*],/etc/zabbix/scripts/nginx-stats.py $1 $2 $3 $4 $5 $6 $7
-````
-````UserParameter=nginx.discovery[*],/etc/zabbix/scripts/nginx-discovery.py $1
-````
-    
+ 1. Добавить /etc/zabbix/zabbix_agentd.d/userparameter_nginx_vts.conf
  2. Перезапустить zabbix-agent
  3. Импортировать шаблон Zabbix
  4. Добавить в host макрос указывающий путь к url status  в формате json (!!!)
