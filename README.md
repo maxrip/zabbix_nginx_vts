@@ -8,7 +8,7 @@
 
 
 Скрипты переделаны из скриптов для NGINX PLUS [nginx-plus-zabbix](https://github.com/strannick-ru/nginx-plus-zabbix), что-то добавлено, что-то сломано :) т.к. plus более умный и дает больше данных.
-Добавлено поиск серверов и их статистика, т.к. изначальный скрипт искал только апстримы. 
+Добавлено поиск серверов и их статистика, т.к. изначальный скрипт искал только апстримы. Переписано на пассивного агента.
 
 **Установка**
 
@@ -16,7 +16,7 @@
  2. Перезапустить zabbix-agent
  3. Импортировать шаблон Zabbix
  4. Добавить в host макрос указывающий путь к url status  в формате json (!!!)
- {$URL_VTS_STATUS} например https://site.com/status/format/json
+ {$URL_VTS_STATUS} http://localhost/vhost_status/format/json
  
 ![macros](https://github.com/Vovanys/zabbix_nginx_vts/blob/master/img/macros.jpg?raw=true)
 
